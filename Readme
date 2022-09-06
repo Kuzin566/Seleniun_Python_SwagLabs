@@ -1,0 +1,13 @@
+
+test_buy_product.py - Данный тест проверяет основной бизнес путь сайта https://www.saucedemo.com от авторизации до покупки товара
+test_link_about.py - данный тест выполняет авторизацию на сайте https://www.saucedemo.com и переход на сайт https://saucelabs.com/
+
+Среда разработки:
+PyCharm 2022.2.1
+Python 3.9
+Selenium 4.4.
+Pytets 7.1.3
+
+
+
+
