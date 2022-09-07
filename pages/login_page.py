@@ -1,10 +1,10 @@
-import time
-from selenium.webdriver import Keys
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 from base.base_class import Base
+from utilities.logger import Logger
 
 """Список пользователей"""
 user_name = ["standard_user", "locked_out_user", "problem_user", "performance_glitch_user", "Nick_Kuzin"]
@@ -54,6 +54,7 @@ class Login_page(Base):
 
     #Metods:
     def avtorization(self):
+        Logger.add_start_step(method="avtorization")
         self.driver.get(self.url)
         self.driver.maximize_window()
         self.get_current_url()
@@ -61,6 +62,7 @@ class Login_page(Base):
         self.input_user_password(user_password[0])
         self.click_login_button()
         self.assert_word(self.get_main_word(), "PRODUCTS")
+        Logger.add_end_step(url=self.driver.current_url, method="avtorization")
 
 
     # def logout_user(self):

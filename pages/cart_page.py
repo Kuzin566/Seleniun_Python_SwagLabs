@@ -1,11 +1,9 @@
-import random
-import time
-from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 from base.base_class import Base
+from utilities.logger import Logger
 
 
 class Cart_page(Base):
@@ -33,8 +31,10 @@ class Cart_page(Base):
 
     #Metods:
     def product_confirmation(self):  #подтверждение товара
+        Logger.add_start_step(method="product_confirmation")
         self.get_current_url()
         self.click_checkout_button()
+        Logger.add_end_step(url=self.driver.current_url, method="product_confirmation")
 
 
 

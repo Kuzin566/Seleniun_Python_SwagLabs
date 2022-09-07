@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 from base.base_class import Base
+from utilities.logger import Logger
 
 "Список локаторов Названий"
 locator_product_name = ["//*[@id='item_4_title_link']/div", "//*[@id='item_0_title_link']/div", "//*[@id='item_1_title_link']/div", "//*[@id='item_5_title_link']/div", "//*[@id='item_2_title_link']/div", "//*[@id='item_3_title_link']/div"]
@@ -62,18 +63,22 @@ class Main_page(Base):
 
     #Metods
     def select_product(self, numbers_product):
+        Logger.add_start_step(method="select_product")
         self.number_product = numbers_product
         self.get_current_url()
         self.click_add_cart_button(self.number_product)
         self.click_cart_button()
+        Logger.add_end_step(url=self.driver.current_url, method="select_product")
 
 
     def select_menu_about(self):
+        Logger.add_start_step(method="select_menu_about")
         self.get_current_url()
         self.click_menu_button()
         self.click_about_button()
         self.get_current_url()
         self.assert_url("https://saucelabs.com/")
+        Logger.add_end_step(url=self.driver.current_url, method="select_menu_about")
 
 
 
