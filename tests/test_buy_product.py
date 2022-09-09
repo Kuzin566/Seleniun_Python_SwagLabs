@@ -12,7 +12,7 @@ from pages.finish_page import Finish_page
 def test_buy_product(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    driver = webdriver.Chrome(executable_path='/Users/viktoria27vika27/PycharmProjects/resource/chromedriver', chrome_options=options)
+    driver = webdriver.Chrome(executable_path='D:\\ProjectPCh\\resourse\\chromedriver.exe', chrome_options=options)
 
     print("Start test_buy_product")
     login = Login_page(driver)
@@ -33,3 +33,4 @@ def test_buy_product(set_up):
     fp = Finish_page(driver)
     fp.finish()
     driver.close()
+

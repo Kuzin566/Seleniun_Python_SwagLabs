@@ -3,8 +3,8 @@ import os
 
 
 class Logger():
-    file_name = "/Users/viktoria27vika27/PycharmProjects/Seleniun_Python_SwagLabs/logs/log_" + str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".log"
-
+    file_name = "D:\\ProjectPCh\\Swaglabs\\logs\\log_" + str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".log"
+    "D:\ProjectPCh\Swaglabs\logs"
     @classmethod
     def write_log_to_file(cls, data: str):
         with open(cls.file_name, 'a', encoding='utf=8') as logger_file:

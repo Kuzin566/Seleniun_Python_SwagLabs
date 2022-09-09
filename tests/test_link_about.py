@@ -8,7 +8,7 @@ from pages.main_page import Main_page
 def test_link_about():
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    driver = webdriver.Chrome(executable_path='/Users/viktoria27vika27/PycharmProjects/resource/chromedriver', chrome_options=options)
+    driver = webdriver.Chrome(executable_path='D:\\ProjectPCh\\resourse\\chromedriver.exe', chrome_options=options)
 
     print("Start")
     login = Login_page(driver)
