@@ -21,7 +21,7 @@ class Login_page(Base):
 
     #Locators:
     locator_user_name = "//input[@id='user-name']"
-    locator_user_password = "//*[@id='password']"
+    locator_user_password = "// *[ @ id = 'password']"
     locator_login_button = "//input[@id='login-button']"
     locator_main_word = "//span[@class='title']"
 
@@ -44,9 +44,10 @@ class Login_page(Base):
         self.get_user_name().send_keys(user_name)
         print("Input user_name : " + user_name)
 
+
     def input_user_password(self, user_password):
         self.get_user_password().send_keys(user_password)
-        print("Input user_password : " + user_password)
+        print("Input user_password : ")
 
     def click_login_button(self):
         self.get_login_button().click()
@@ -63,6 +64,7 @@ class Login_page(Base):
         self.click_login_button()
         self.assert_word(self.get_main_word(), "PRODUCTS")
         Logger.add_end_step(url=self.driver.current_url, method="avtorization")
+
 
 
     # def logout_user(self):
