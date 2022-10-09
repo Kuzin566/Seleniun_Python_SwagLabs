@@ -5,11 +5,11 @@ from pages.main_page import Main_page
 
 
 
-def test_link_about():
+def test_link_about(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(executable_path='D:\\ProjectPCh\\resourse\\chromedriver.exe', chrome_options=options)
-    print("Start")
+
     login = Login_page(driver)
     login.avtorization()
 

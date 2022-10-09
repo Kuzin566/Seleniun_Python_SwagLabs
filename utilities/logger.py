@@ -28,6 +28,5 @@ class Logger():
         data_to_add = f"End time: {str(datetime.datetime.now())}\n"
         data_to_add += f"End name method: {method}\n"
         data_to_add += f"URL: {url}\n"
-        data_to_add += f"\n-----\n"
 
         cls.write_log_to_file(data_to_add)
